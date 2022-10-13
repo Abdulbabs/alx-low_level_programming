@@ -2,9 +2,9 @@
 #include <unistd.h>
 
 /**
- * main - Entrty Point
- * Return: Always (1)
- */
+* main - Entrty Point
+* Return: Always (1)
+*/
 
 int main(void)
 {
