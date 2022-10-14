@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <time.h>                                                                                                               
-/* more header goes there */                                                     
-/* betty style doc for main goes here */
+/**
+* main - Entry point
+*
+* Return: Always 0 success
+*/                                                     
 
 int main (void)
 {
@@ -12,15 +15,15 @@ int main (void)
 		
 	if (n > 5)
 	{
-		printf("%s %d is %d and is greater than 5\n", n);
+		printf("and is greater than 5\n", n);
 	}
 	else if (n == 0)
 	{
-		printf("%s %d is %d and is 0\n", n);
+		printf("and is 0\n", n);
 	}
 	else if (n <  && != 6)
 	{
-		printf("%s %d is %d and is less than 6 and not 0\n", n);
+		printf("and is less than 6 and not 0\n", n);
 	}
 	return (0);
 }				
