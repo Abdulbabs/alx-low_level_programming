@@ -1,18 +1,11 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
+ * main - Prints _putchar
  *
- *  * main - Prints _putchar
- *
- *   *
- *
- *    * Return: 0 if success
- *
- *     */
-
+ * Return: 0 if success
+ */
 int main(void)
-
 {
 	_putchar('_');
 	_putchar('p');
@@ -23,6 +16,5 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
-	
 	return (0);
 }
