@@ -2,17 +2,19 @@
 
 /**
  *
- * print_alphabet - writes the alphabets to stdout
- */
+ *  * print_alphabet - writes the alphabets to stdout
+ *
+ *   *
+ *
+ *    */
 
 void print_alphabet(void)
 {
-	char i;
-
-	for (i = "a"; i <= "z"; i++)
+	int i;
+	
+	for (i = 0; i < 26; i++)
 	{
-		_putchar(i);
+		_putchar('a' + i);
 	}
 	_putchar('\n');
-	return (0);
 }
