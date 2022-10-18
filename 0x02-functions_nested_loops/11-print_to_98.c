@@ -1,13 +1,19 @@
 #include "main.h"
 
 /**
- * add - writes the character c to stdout
- * @a: The character to test
- * @b: second integer
+ * print_to_98 - writes the character c to stdout
+ * @n: The character to test
  *
- * Return: sum args.
  */
-int add(int a, int b)
+void print_to_98(int n)
 {
-	return (a + b);
+	int i = n;
+
+	if (n < 98)
+		for (; i < 98; i++)
+			printf("%d, ", i);
+	else
+		for (; i > 98; i--)
+			printf("%d, ", i);
+	printf("98\n");
 }
