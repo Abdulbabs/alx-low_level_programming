@@ -3,40 +3,16 @@
 /**
  * times_table - prints de 9 time table, starting with 0
  *
- * return: emoty output
+ * return: empty output
  */
-int main(void)
+void times_table(void)
 {
-	times_table();
-	int x, y, z, u, d;
-
-	for (x = 0; x <= 9; x++)
+	int n, i;
+	printf("Enter an integer: ");
+	scanf("%d", &n);
+	for (i = 0; i <= 9; ++i)
 	{
-		for (y = 0; y <= 9; y++)
-		{
-			z = x * y;
-
-			if (z > 9)
-			{
-				u = z % 10;
-				d =  (z - u) / 10;
-				_putchar(44);
-				_putchar(32);
-				_putchar(d + '0');
-				_putchar(u + '0');
-			}
-			else
-			{
-				if (y != 0)
-				{
-					_putchar(44);
-					_putchar(32);
-					_putchar(32);
-				}
-				_putchar(z + '0');
-			}
-		}
-
-		_putchar('\n');
+		printf("%d * %d = %d \n", n, i, n * i);
 	}
+	return 0;
 }
