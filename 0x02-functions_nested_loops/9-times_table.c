@@ -5,8 +5,9 @@
  *
  * return: emoty output
  */
-void times_table (void)
+int main(void)
 {
+	times_table();
 	int x, y, z, u, d;
 
 	for (x = 0; x <= 9; x++)
