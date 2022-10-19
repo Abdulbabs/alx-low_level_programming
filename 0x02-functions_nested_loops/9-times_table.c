@@ -5,7 +5,7 @@
  *
  * return: emoty output
  */
-void times_table(void)
+void times_table (void)
 {
 	int x, y, z, u, d;
 
