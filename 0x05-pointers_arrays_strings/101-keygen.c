@@ -1,29 +1,32 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
-/**
- * main - entry point
- * Description: my keygen.
- * Return: 0.
- */
+#include <stdlib.h>
+#include <stdio.h>
 
+#define TARGET 2772
+#define MAX 126
+#define MIN 33
+
+/**
+ * main - generate keygen
+ *
+ * Return: 0 always
+ */
 int main(void)
 {
-	int i = 0;
-	int j = 0;
-	int k = 0;
-	time_t t;
-
-	srand((unsigned int) time(&t));
-	while (j < 2772)
+	int checksum = 0;
+	
+	srand( time( 0 ) );
+	
+	while ( checksum + MAX <= TARGET )
 	{
-		i = rand() % 128;
-		if ((j + i) > 2772)
-			break;
-		j += i;
-		k++;
-		printf("%c", i);
-	}
-	printf("%c\n", (2772 - j));
+		char random_char = rand() % (MAX - MIN + 1) + MIN;
+
+		if (TARGET - (checksum + random_char) <= MIN)
+			continue;
+		checksum += (int) random_char;
+		printf("%c", random_char);
+	} 
+	printf("%c", TARGET - checksum);
+	
 	return (0);
 }
