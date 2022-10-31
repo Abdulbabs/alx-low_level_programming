@@ -1,39 +1,29 @@
 #include "main.h"
-
 /**
- *
- * * print_chessboard - a function that prints the chessboard
- *
- * * @a: dimensional array
- *
- * **/
-
-
-
-void print_chessboard(char (*a)[8])
-
+* _strstr - this function locates a substring
+* @haystack:character string
+* @needle:character string
+* Return: a pointer to the beginning of substring or NULL
+**/
+char *_strstr(char *haystack, char *needle)
 {
+	int i;
+	int j;
+	int l;
 
-		int i;
-
-			int j;
-
-
-
-				for (i = 0; i < 8; i++)
-
-						{
-
-									for (j = 0; j < 8; j++)
-
-												{
-
-																_putchar(a[i][j]);
-
-																		}
-
-											_putchar('\n');
-
-												}
-
+	for (i = 0; haystack[i] != '\0'; i++)
+	{
+		for (l = i, j = 0; needle[j] != '\0'; j++, l++)
+		{
+			if (needle[j] != haystack[l] || haystack[l] == '\0')
+			{
+				break;
+			}
+		}
+		if (needle[j] == '\0')
+		{
+			return (haystack + i);
+		}
+	}
+	return (0);
 }
